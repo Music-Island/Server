@@ -1,7 +1,7 @@
 ## Welcome to Music-Island Server!
 ### What Is It?
 The Music-Island® Server is an open source implementation of the Apache Tomcat
-technologies. The Server responds to the [Music-Island® Client](https://github.com/Music-Island/Client)
+technologies. The Server responds to the [Music-Island® Client](https://github.com/Music-Island/Client) demand.
 ### Documentation
 Tips：update at any time
 #### Response status
