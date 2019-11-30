@@ -17,7 +17,7 @@ public class rankList extends HttpServlet {
     }
 
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-//    static final String DB_URL = "jdbc:mysql://192.168.145.128:3306/music_island";
+    //    static final String DB_URL = "jdbc:mysql://192.168.145.128:3306/music_island";
     static final String DB_URL = "jdbc:mysql://localhost:3306/musicIsland";
     static final String USER = "root";
     static final String PASS = "FZU2019Musland";
@@ -26,11 +26,19 @@ public class rankList extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String tempCounter = req.getParameter("count");
-        int count = Integer.parseInt(tempCounter);
-        System.out.println(count);
-        JSONArray respJsonArr = JSONArray.parseArray(getRankList(count));
+        JSONArray respJsonArr = new JSONArray();
+        try {
+            String tempCounter = req.getParameter("count");
+            int count = Integer.parseInt(tempCounter);
+            System.out.println(count);
+            respJsonArr = JSONArray.parseArray(getRankList(count));
+        } catch (NumberFormatException nfe) {
+            JSONObject errorObjet = new JSONObject();
+            errorObjet.put("status", "0000");
+            respJsonArr.add(errorObjet);
+        }
         resp.getWriter().write(respJsonArr.toJSONString());
+        resp.getWriter().close();
         System.out.println(respJsonArr.toJSONString());
     }
 
