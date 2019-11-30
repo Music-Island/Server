@@ -26,5 +26,5 @@ Tips：update at any time
 - Method：GET
 - URL:http://134.175.99.234:8080/rankList/rankList
 - Parameter：count（）
-- Response：[{"rank":"1","usrname":"jimmy","points":0},{"rank":"2","usrname":"liyi","points":0}]
+- Response：[{"rank":"1","usrname":"jimmy","points":"0"},{"rank":"2","usrname":"liyi","points":"0"}]
 - Case：http://134.175.99.234:8080/rankList/rankList?count=5
