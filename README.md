@@ -5,6 +5,7 @@ technologies. The Server responds to the [Music-Island® Client](https://github.
 ### Documentation
 Tips：update at any time
 #### Response status
+- 0000：parameter error
 - 1001：login successfully
 - 1002：login failed
 - 1003：registered successfully
