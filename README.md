@@ -10,20 +10,20 @@ Tips：update at any time
 - 1003：registered successfully
 - 1004：registration failed
 #### Login
-- ### Method：POST
-- ### Header：Content-Type：application/json;charset=utf-8
-- ### URL：http://134.175.99.234:8080/user/login
-- ### Response：{"status":"1001"} OR {"status":"1002"}
-- ### Case：{"passwd":"123456","userid":"111701265"}
+- Method：POST
+- Header：Content-Type：application/json;charset=utf-8
+- URL：http://134.175.99.234:8080/user/login
+- Response：{"status":"1001"} OR {"status":"1002"}
+- Case：{"passwd":"123456","userid":"111701265"}
 #### Register
-- ### Method：POST
-- ### Header：Content-Type：application/json;charset=utf-8
-- ### URL:http://134.175.99.234:8080/user/register
-- ### Response：{"status":"1004"} OR {"status":"1003"}
-- ### Case：{"passwd":"123456","userid":"111701205","usrname":"jimmy"}
+- Method：POST
+- Header：Content-Type：application/json;charset=utf-8
+- URL:http://134.175.99.234:8080/user/register
+- Response：{"status":"1004"} OR {"status":"1003"}
+- Case：{"passwd":"123456","userid":"111701205","usrname":"jimmy"}
 #### Rank List
-- ### Method：GET
-- ### URL:http://134.175.99.234:8080/rankList/rankList
-- ### Parameter：count（）
-- ### Response：[{"rank":"1","usrname":"jimmy","points":0},{"rank":"2","usrname":"liyi","points":0}]
-- ### Case：http://134.175.99.234:8080/rankList/rankList?count=5
+- Method：GET
+- URL:http://134.175.99.234:8080/rankList/rankList
+- Parameter：count（）
+- Response：[{"rank":"1","usrname":"jimmy","points":0},{"rank":"2","usrname":"liyi","points":0}]
+- Case：http://134.175.99.234:8080/rankList/rankList?count=5
