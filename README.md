@@ -10,6 +10,8 @@ Tips：update at any time
 - 1002：login failed
 - 1003：registered successfully
 - 1004：registration failed
+- 1005：add points successfully
+- 1006：add points failed
 #### Login
 - Method：POST
 - Header：Content-Type：application/json;charset=utf-8
