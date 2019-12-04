@@ -19,4 +19,20 @@
         <servlet-name>register</servlet-name>
         <url-pattern>/register</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>addPoints</servlet-name>
+        <servlet-class>cn.itcast.addPoints</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addPoints</servlet-name>
+        <url-pattern>/addPoints</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>logout</servlet-name>
+        <servlet-class>cn.itcast.logout</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>logout</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
 </web-app>
