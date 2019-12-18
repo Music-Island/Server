@@ -3,12 +3,28 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+<!--    <servlet>-->
+<!--        <servlet-name>rankList</servlet-name>-->
+<!--        <servlet-class>cn.itcast.rankList</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>rankList</servlet-name>-->
+<!--        <url-pattern>/rankList</url-pattern>-->
+<!--    </servlet-mapping>-->
     <servlet>
-        <servlet-name>rankList</servlet-name>
-        <servlet-class>cn.itcast.rankList</servlet-class>
+        <servlet-name>UpdatePoint</servlet-name>
+        <servlet-class>cn.itcast.UpdatePoints</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>rankList</servlet-name>
-        <url-pattern>/rankList</url-pattern>
+        <servlet-name>UpdatePoint</servlet-name>
+        <url-pattern>/updatePoints</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>GetRankListByMapname</servlet-name>
+        <servlet-class>cn.itcast.GetRankListByMapname</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetRankListByMapname</servlet-name>
+        <url-pattern>/getRankList</url-pattern>
     </servlet-mapping>
 </web-app>
