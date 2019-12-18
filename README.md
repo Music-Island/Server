@@ -19,8 +19,7 @@ Tips：update at any time
 - Header：Content-Type：application/json;charset=utf-8
 - URL：http://134.175.99.234:8080/user/login
 - Parameter：{"passwd":"password","userid":"userid"} (json)
-- Response：{"status":"1001","token":"CjPgeDlRP8DVKyMlamcYjLQXJOJTvB"}
- OR {"status":"1002"}
+- Response：{"usrname":"xxx","token":"token","status":"1001"} OR {"status":"1002"}
 #### Register
 - Method：POST
 - Header：Content-Type：application/json;charset=utf-8
@@ -28,21 +27,21 @@ Tips：update at any time
 - URL:http://134.175.99.234:8080/user/register
 - Response：{"status":"1004"} OR {"status":"1003"}
 #### Rank List
-- Method：GET
-- URL:http://134.175.99.234:8080/rankList/rankList
-- Parameter：count（count for list）
+- Method：POST
+- Header：Content-Type：application/json;charset=utf-8
+- URL:http://134.175.99.234:8080/rankList/getRankList
+- Parameter：{"count":"5","mapname":"mapname"}(json)
 - Response：[{"rank":"1","usrname":"jimmy","points":"0"},{"rank":"2","usrname":"liyi","points":"0"}]
-- Case：http://134.175.99.234:8080/rankList/rankList?count=5
 #### Logout
 - Method：POST
 - Header：Auth-Token：token
 - URL：http://134.175.99.234:8080/user/logout
 - Response：{"userid":"111701205","status":"1008"} OR {"status":"1009"}
 - Case：setHeader("Auth-Token", token)
-#### AddPoints
+#### UpdatePoint
 - Method：POST
 - Header：Auth-Token：token
-- URL：http://134.175.99.234:8080/user/addPoints
-- Parameter：{"points":"ponits"}
+- URL：http://134.175.99.234:8080/rankList/updatePoints
+- Parameter：{"mapname":"mapname","points":"65"}
 - Response：{"status":"1005"} OR {"status":"1006"}
 - Case：setHeader("Auth-Token", token);{"points":"5"}
