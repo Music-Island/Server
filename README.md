@@ -16,6 +16,8 @@ Tips：update at any time
 - 1008：logout failed
 - 1009：commit successfully
 - 1010：commit failed
+- 1011：get commit successfully
+- 1012：get commit failed
 #### Login
 - Method：POST
 - Header：Content-Type：application/json;charset=utf-8
@@ -47,3 +49,15 @@ Tips：update at any time
 - Parameter：{"mapname":"mapname","points":"65"}
 - Response：{"status":"1005"} OR {"status":"1006"}
 - Case：setHeader("Auth-Token", token);{"points":"5"}
+#### Commit Comment
+- Method：POST
+- Header:Auth-Token：token
+- URL：http://134.175.99.234:8080/Commit/Commit
+- Parameter：{"comment":"lajise","mapname":"anyExistedMap","usrname":"yourUsername","timestamp":"timestamp"}
+- Response：{"status":"1009"} OR {"status":"1010"}
+#### Get Comment
+- Method：POST
+- Header：Auth-Token：token
+- URL：http://134.175.99.234:8080/Commit/Get
+- Parameter：{"mapname":"anyExistedMap","usrname":"yourUsername"}
+- Response：[{"timpstamp":"1576837311273","rank":"1","comment":"lajise","usrname":"playerName"}] OR [{"status":"1012"}]
