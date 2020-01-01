@@ -18,6 +18,8 @@ Tips：update at any time
 - 1010：commit failed
 - 1011：get commit successfully
 - 1012：get commit failed
+- 2001：Email leagl
+- 2002：Email repeated
 #### Login
 - Method：POST
 - Header：Content-Type：application/json;charset=utf-8
@@ -26,8 +28,10 @@ Tips：update at any time
 - Response：{"usrname":"xxx","token":"token","status":"1001"} OR {"status":"1002"}
 #### Register
 - Method：POST
-- Header：Content-Type：application/json;charset=utf-8
-- Parameter：{"passwd":"password","userid":"userid","usrname":"username"}
+- Header：
+    - Content-Type：application/json;charset=utf-8
+    - emailToken：Get This From Your E-mail
+- Parameter：{"passwd":"password","userid":"userid","email":"email","usrname":"usrname"}
 - URL:http://134.175.99.234:8080/user/register
 - Response：{"status":"1004"} OR {"status":"1003"}
 #### Rank List
@@ -61,3 +65,12 @@ Tips：update at any time
 - URL：http://134.175.99.234:8080/Commit/Get
 - Parameter：{"mapname":"anyExistedMap","usrname":"yourUsername"}
 - Response：[{"timpstamp":"1576837311273","rank":"1","comment":"lajise","usrname":"playerName"}] OR [{"status":"1012"}]
+#### Get E-mail Token
+- Method：POST
+- Header：
+    - Content-Type：application/json;charset=utf-8
+    - emailHost：Your E-mail(end with @xxxxx.xxx)
+    - userid：userid
+- URL：http://134.175.99.234:8080/user/getEmail
+- Response：{"status":"2001"}OR{"status":"2002"}
+- TTL(Time To Live)：one minute
