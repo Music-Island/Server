@@ -33,11 +33,13 @@ public class register extends HttpServlet {
             String user_id = registerJson.getString("userid");
             String pass_wd = registerJson.getString("passwd");
             String usr_name = registerJson.getString("usrname");
+            String emailHost = registerJson.getString("email");
+            String emailToken = req.getHeader("emailToken");
 
             if (checkAccount.checkExisted(user_id)) {
                 respJson.put("status", "1004");
             } else {
-                if (checkAccount.addAcount(user_id, pass_wd, usr_name))
+                if (EmailCheck.matchEmailTemp(user_id, emailHost, emailToken) && checkAccount.addAcount(user_id, pass_wd, usr_name, emailHost))
                     respJson.put("status", "1003");
                 else {
                     respJson.put("status", "1004");
