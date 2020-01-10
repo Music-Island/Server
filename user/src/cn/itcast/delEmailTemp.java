@@ -8,7 +8,7 @@ public class delEmailTemp extends Thread {
     @Override
     public void run() {
         try {
-            sleep(60000);
+            sleep(300000);
         } catch (InterruptedException e) {
 //            e.printStackTrace();
         }
